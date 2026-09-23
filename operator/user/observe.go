@@ -91,7 +91,7 @@ func (u *userClient) Observe(ctx context.Context, mg resource.Managed) (managed.
 			return managed.ExternalObservation{ResourceUpToDate: false, ResourceExists: true}, nil
 		}
 
-		log.Info("user client created, everything went fine " + string(secret.Data[AccessKeyName]) + " " + string(secret.Data[SecretKeyName]))
+		log.Info("user client created, everything went fine")
 	}
 
 	return managed.ExternalObservation{ResourceExists: true, ResourceUpToDate: true}, nil
